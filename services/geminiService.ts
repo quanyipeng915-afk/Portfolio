@@ -42,6 +42,6 @@ export const generateChatResponse = async (
     return result.text || "I'm sorry, I couldn't generate a response at the moment.";
   } catch (error) {
     console.error("Error generating response:", error);
-    return "I'm having trouble connecting to my brain right now. Please try again later or email Alex directly.";
+    return "I'm having trouble connecting to my brain right now. Please try again later or email Elian directly.";
   }
 };

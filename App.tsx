@@ -63,7 +63,7 @@ const App: React.FC = () => {
               I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
             </p>
             <a 
-              href="mailto:hello@alex.design"
+              href="mailto:hello@elian.design"
               className="inline-block bg-white text-stone-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-200 transition-colors mb-20"
             >
               Say Hello
@@ -83,7 +83,7 @@ const App: React.FC = () => {
             </div>
             
             <div className="text-stone-600 text-sm">
-              © {new Date().getFullYear()} Alex Design. Built with React & Tailwind.
+              © {new Date().getFullYear()} Elian Design. Built with React & Tailwind.
             </div>
           </div>
         </section>

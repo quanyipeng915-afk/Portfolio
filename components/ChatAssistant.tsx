@@ -7,7 +7,7 @@ import { generateChatResponse } from '../services/geminiService';
 export const ChatAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: "Hi! I'm Alex's AI Assistant. Ask me anything about his work, experience, or design philosophy." }
+    { role: 'model', text: "Hi! I'm Elian's AI Assistant. Ask me anything about his work, experience, or design philosophy." }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -130,7 +130,7 @@ export const ChatAssistant: React.FC = () => {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyPress}
-                  placeholder="Does Alex know React?"
+                  placeholder="Does Elian know React?"
                   className="w-full pl-4 pr-12 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-all text-sm"
                 />
                 <button

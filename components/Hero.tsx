@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
         className="max-w-4xl z-10"
       >
         <h2 className="text-lg md:text-xl font-medium text-stone-500 mb-6 tracking-wide">
-          Hello, I'm Alex.
+          Hello, I'm Elian.
         </h2>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[1.1] mb-8">
           Crafting <span className="italic text-stone-400">digital experiences</span> that balance beauty & utility.

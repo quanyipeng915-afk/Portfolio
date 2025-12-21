@@ -10,51 +10,51 @@ export const NAV_LINKS = [
 export const LARGE_PROJECTS: Project[] = [
   {
     id: 'p1',
-    title: 'FinTech Dashboard Redesign',
-    category: 'Product Design',
-    description: 'A complete overhaul of a legacy financial analytics platform. Focused on data visualization clarity and reducing cognitive load for high-frequency traders.',
-    imageUrl: 'https://picsum.photos/seed/fintech/1200/800',
+    title: "Paws' Whisper",
+    category: 'Product Design, UE/UI design',
+    description: "I designed interactive ‘paws’ paired with a gamified communication system. It gives families a low-pressure, playful way to reconnect—something that feels natural rather than forced.",
+    imageUrl: '/Images/P1.png',
     year: '2024',
-    tags: ['Figma', 'React', 'Data Viz'],
+    tags: ['Figma', 'Arduino', 'LLM', 'Parent-child communication'],
   },
   {
     id: 'p2',
-    title: 'EcoEats Delivery App',
-    category: 'Mobile UX',
-    description: 'Sustainable food delivery service application. Designed the end-to-end user journey from onboarding to carbon-offset tracking.',
-    imageUrl: 'https://picsum.photos/seed/food/1200/800',
-    year: '2023',
-    tags: ['Mobile', 'Prototyping', 'User Research'],
+    title: 'Harmonic Commute',
+    category: 'Game design, mobile application',
+    description: "In order to relieve people's bad emotions during commuting, combined with my own work experience, this project will start from the commuting scene and use the methods of art healing games and breathing rhythm exercises to solve the problem.",
+    imageUrl: '/Images/P2.png',
+    year: '2024',
+    tags: ['Audio visualization', 'TouchDesigner', 'Arduino'],
   },
   {
     id: 'p3',
-    title: 'Nexus Smart Home',
-    category: 'IoT Interface',
-    description: 'Control hub interface for a smart home ecosystem. Created a unified design language system for tablet and mobile controllers.',
-    imageUrl: 'https://picsum.photos/seed/iot/1200/800',
-    year: '2023',
-    tags: ['Design System', 'IoT', 'Interaction'],
+    title: 'Heart Patch',
+    category: 'Interactive design, Industrial design, Wearable design',
+    description: 'I came up with an idea for a device that mimics the sensation of self-harm without causing real damage, combined with software that helps users reflect on their emotions afterward, encouraging a positive, healing cycle.',
+    imageUrl: '/Images/P3.png',
+    year: '2025',
+    tags: ['Product', 'Psychology', 'Mental Health'],
   },
   {
     id: 'p4',
-    title: 'Muse Art Gallery',
-    category: 'Web Design',
-    description: 'Immersive virtual gallery experience. utilized WebGL concepts in design to create depth and spatial awareness in a browser.',
-    imageUrl: 'https://picsum.photos/seed/art/1200/800',
-    year: '2022',
-    tags: ['Web Design', '3D', 'Experiential'],
+    title: 'Archive of Being',
+    category: 'Speculative design, Service design',
+    description: 'This speculative project examines how AI-driven societies may impact human identity, digital memory, and personal agency.',
+    imageUrl: '/Images/P4.png',
+    year: '2025',
+    tags: ['Future', 'Game', 'Immersive'],
   },
 ];
 
 export const SMALL_PROJECTS: Project[] = [
   {
     id: 's1',
-    title: 'Daily UI 001',
-    category: 'Experiment',
-    description: 'Sign up flow exploration.',
+    title: 'Pray for a son',
+    category: 'Game Design',
+    description: 'Pray for a Son tells the story of a family violence incident in a 1960s village rooted in the preference for sons over daughters. In the game, players take on the role of a young girl in a dreamlike state, experiencing and attempting to alter the painful events of her past, ultimately seeking a different ending. The game features a Chinese horror style, intertwined with elements of traditional Chinese folklore. Players are tasked with solving puzzles, exploring, and revisiting the shadows that haunt the girl’s short life. The choices players make for her will determine if this dream becomes a nightmare or a peaceful dream.',
     imageUrl: 'https://picsum.photos/seed/ui1/600/600',
-    year: '2024',
-    tags: ['UI'],
+    year: '2022',
+    tags: ['Game', 'Unity'],
   },
   {
     id: 's2',
@@ -113,17 +113,17 @@ export const SOCIAL_LINKS = [
   { name: 'LinkedIn', url: '#' },
   { name: 'Dribbble', url: '#' },
   { name: 'Twitter', url: '#' },
-  { name: 'Email', url: 'mailto:hello@alex.design' },
+  { name: 'Email', url: 'mailto:hello@elian.design' },
 ];
 
 export const RESUME_CONTEXT = `
-You are an AI assistant for Alex, a Senior UI/UX Designer. 
-Alex has experience with Figma, React, Prototyping, and Design Systems.
-Alex is currently working at TechFlow Solutions (2022-Present).
+You are an AI assistant for Elian, a Senior UI/UX Designer. 
+Elian has experience with Figma, React, Prototyping, and Design Systems.
+Elian is currently working at TechFlow Solutions (2022-Present).
 Previously worked at Creative Agency X (2019-2022) and StartUp Inc (2017-2019).
 Key projects include: FinTech Dashboard, EcoEats, Nexus Smart Home, and Muse Art Gallery.
-Alex focuses on clean, minimalist aesthetics and user-centered design principles.
-Alex is open to freelance opportunities and full-time senior roles.
-When asked about contact, direct them to hello@alex.design.
+Elian focuses on clean, minimalist aesthetics and user-centered design principles.
+Elian is open to freelance opportunities and full-time senior roles.
+When asked about contact, direct them to hello@elian.design.
 Keep answers professional, concise, and friendly.
 `;

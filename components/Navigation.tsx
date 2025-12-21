@@ -22,7 +22,7 @@ export const Navigation: React.FC = () => {
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#" className="text-2xl font-serif font-bold tracking-tight z-50 relative">
-          Alex<span className="text-orange-600">.</span>
+          Elian<span className="text-orange-600">.</span>
         </a>
 
         {/* Desktop Nav */}
