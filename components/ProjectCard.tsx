@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
   project: Project;
@@ -57,13 +58,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             ))}
           </div>
 
-          <a 
-            href={project.link || '#'} 
+          <Link 
+            to={`/project/${project.id}`}
             className="inline-flex items-center gap-2 text-stone-900 font-semibold border-b border-stone-900 pb-1 w-fit hover:text-orange-600 hover:border-orange-600 transition-colors group-hover/link"
           >
             View Case Study
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
-          </a>
+          </Link>
         </div>
       </div>
     </motion.div>

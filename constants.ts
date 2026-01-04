@@ -52,68 +52,60 @@ export const SMALL_PROJECTS: Project[] = [
     title: 'Pray for a son',
     category: 'Game Design',
     description: 'Pray for a Son tells the story of a family violence incident in a 1960s village rooted in the preference for sons over daughters. In the game, players take on the role of a young girl in a dreamlike state, experiencing and attempting to alter the painful events of her past, ultimately seeking a different ending. The game features a Chinese horror style, intertwined with elements of traditional Chinese folklore. Players are tasked with solving puzzles, exploring, and revisiting the shadows that haunt the girl’s short life. The choices players make for her will determine if this dream becomes a nightmare or a peaceful dream.',
-    imageUrl: 'https://picsum.photos/seed/ui1/600/600',
+    imageUrl: '/Images/pray.png',
     year: '2022',
-    tags: ['Game', 'Unity'],
+    tags: ['Game', 'Unity', 'Character Design'],
   },
   {
     id: 's2',
-    title: 'Icon Set',
-    category: 'Graphic',
-    description: 'Custom SVG icons for a travel app.',
-    imageUrl: 'https://picsum.photos/seed/icon/600/600',
-    year: '2024',
-    tags: ['Vector'],
+    title: 'Acorn Podcast',
+    category: 'UI & Branding Design',
+    description: 'Inspired by the rise of audio social platforms like Clubhouse in 2021, I aimed to strengthen platform-user interaction through a voice-based community model. Regular themed events encourage voice participation, nurturing new creators.',
+    imageUrl: '/Images/podcast.png',
+    year: '2022',
+    tags: ['User Interface', 'Branding'],
   },
   {
     id: 's3',
-    title: 'Motion Study',
-    category: 'Animation',
-    description: 'Micro-interactions for button states.',
-    imageUrl: 'https://picsum.photos/seed/motion/600/600',
+    title: 'Sub-Sports Hangzhou',
+    category: 'Future community, Fieldwork, Book design',
+    description: 'Sports have their "professional" and "daily" aspects. Professional sports, with high entry barriers, are an option for a few, but the goal is to drive a low-threshold, mass movement for the majority. Building on these insights, I contributed to the project by designing a book and creating AR-enhanced visuals.',
+    imageUrl: '/Images/Book.png',
     year: '2023',
     tags: ['After Effects'],
   },
-  {
-    id: 's4',
-    title: 'Typography',
-    category: 'Print',
-    description: 'Poster series exploring kinetic type.',
-    imageUrl: 'https://picsum.photos/seed/type/600/600',
-    year: '2023',
-    tags: ['Typography'],
-  },
+
 ];
 
 export const EXPERIENCES: Experience[] = [
   {
     id: 'e1',
-    role: 'Senior Product Designer',
-    company: 'TechFlow Solutions',
-    period: '2022 - Present',
-    description: 'Leading the design system team and overseeing the UX strategy for the core SaaS product. Improved user retention by 15% through streamlined onboarding flows.'
+    role: 'User Experience Design Assistant',
+    company: 'Shanghai LUMO Culture Communication Co., Ltd.',
+    period: 'Jun 2024 - Nov 2024',
+    description: 'Conducted market research and user behavior analysis for Weseed Coffee’s online shop, identifying consumer trends and optimizing the purchasing journey. Provided actionable insights to improve user satisfaction and drive higher conversion rates. Designed visual interfaces, ensuring brand consistency and an intuitive shopping experience.'
   },
   {
     id: 'e2',
-    role: 'UI/UX Designer',
-    company: 'Creative Agency X',
-    period: '2019 - 2022',
-    description: 'Worked with diverse clients ranging from startups to Fortune 500s. Specialized in mobile app design and rapid prototyping.'
+    role: 'UI/UX Design Intern',
+    company: 'Yonyou Network Technology Co., Ltd.',
+    period: 'Jan 2023 - Mar 2023',
+    description: 'Organized and maintained the UI component library, ensuring consistency and usability across multiple systems. Collected user feedback and designed interactive layouts for internal social features, improving user experience. Developed visual design for the company website, focusing on cohesive layouts and key functional elements.'
   },
   {
     id: 'e3',
-    role: 'Junior Designer',
-    company: 'StartUp Inc',
-    period: '2017 - 2019',
-    description: 'Collaborated with engineers to implement designs. Created marketing assets and assisted in user testing sessions.'
+    role: 'Visual Design Intern',
+    company: 'TRANSSNET',
+    period: 'Mar 2023 - Aug 2023',
+    description: 'Designed and implemented key visuals for digital marketing campaigns, customizing graphics to enhance user engagement. Edited and optimized video ads by analyzing user behavior and performance data, increasing click-through rates. Created dynamic animations for live-stream gifts, contributing to platform monetization.'
   },
 ];
 
 export const SOCIAL_LINKS = [
-  { name: 'LinkedIn', url: '#' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/quanyi-peng-26b42a279/' },
   { name: 'Dribbble', url: '#' },
-  { name: 'Twitter', url: '#' },
-  { name: 'Email', url: 'mailto:hello@elian.design' },
+  { name: 'Instagram', url: 'https://www.instagram.com/quanyi_0915/' },
+  { name: 'Email', url: 'mailto:quanyipeng915@gmail.com' },
 ];
 
 export const RESUME_CONTEXT = `

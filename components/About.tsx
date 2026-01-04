@@ -32,13 +32,17 @@ export const About: React.FC = () => {
           transition={{ delay: 0.2 }}
           className="text-stone-600 leading-relaxed mb-8"
         >
-          With over 7 years of experience, I've learned that the best products are built at the intersection of empathy, technology, and business goals.
+          With over 4 years of design experience, I've learned that the best products are built at the intersection of empathy, technology, and business goals.
         </motion.p>
 
-        <button className="flex items-center gap-2 text-stone-900 border border-stone-200 px-6 py-3 rounded-xl hover:bg-stone-50 transition-colors">
+        <a 
+          href="/resume.pdf" 
+          download="Elian_Peng_Resume.pdf"
+          className="flex items-center gap-2 text-stone-900 border border-stone-200 px-6 py-3 rounded-xl hover:bg-stone-50 transition-colors w-fit"
+        >
           <Download className="w-4 h-4" />
           <span>Download Resume</span>
-        </button>
+        </a>
       </div>
 
       {/* Experience Timeline */}
