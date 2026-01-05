@@ -57,7 +57,7 @@ export const ProjectPage: React.FC = () => {
 
           <div className="w-full aspect-video bg-stone-200 rounded-3xl overflow-hidden mb-16 shadow-lg">
             <img 
-              src={project.imageUrl} 
+              src={project.detailImageUrl || project.imageUrl} 
               alt={project.title} 
               className="w-full h-full object-cover"
             />
@@ -70,17 +70,36 @@ export const ProjectPage: React.FC = () => {
                 {project.description}
               </p>
               
-              {/* Placeholder for more content since constants.ts only has short descriptions currently */}
-              <div className="prose prose-lg prose-stone">
-                <p>
-                  This is a detailed case study page. You can add more specific fields to your project data structure 
-                  in <code>constants.ts</code> such as "challenge", "solution", and "results" to populate this section dynamically.
-                </p>
-                <p>
-                  For now, this page demonstrates the routing and layout structure. The visual style matches your main 
-                  landing page, using the same typography, colors, and spacing.
-                </p>
+              {/* Dynamic Content Sections */}
+              <div className="space-y-16">
+                {project.content?.map((section, idx) => (
+                  <div key={idx}>
+                    {section.title && (
+                      <h3 className="text-2xl font-serif mb-4 text-stone-900">{section.title}</h3>
+                    )}
+                    <p className="text-lg text-stone-600 leading-relaxed mb-6 whitespace-pre-line">
+                      {section.text}
+                    </p>
+                    {section.imageUrl && (
+                      <div className="rounded-2xl overflow-hidden shadow-md my-8">
+                        <img 
+                          src={section.imageUrl} 
+                          alt={section.title || 'Project detail'} 
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
+
+              {!project.content && (
+                <div className="prose prose-lg prose-stone">
+                  <p className="italic text-stone-500">
+                    Detailed case study content coming soon...
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="lg:col-span-1">

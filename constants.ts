@@ -14,8 +14,24 @@ export const LARGE_PROJECTS: Project[] = [
     category: 'Product Design, UE/UI design',
     description: "I designed interactive ‘paws’ paired with a gamified communication system. It gives families a low-pressure, playful way to reconnect—something that feels natural rather than forced.",
     imageUrl: '/Images/P1.png',
+    detailImageUrl: '/Images/P1-detail.png', // Add your different detail page image here
     year: '2024',
     tags: ['Figma', 'Arduino', 'LLM', 'Parent-child communication'],
+    content: [
+      {
+        title: 'The Challenge',
+        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+      },
+      {
+        title: 'The Solution',
+        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
+        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+      },
+      {
+        title: 'User Testing',
+        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
+      }
+    ]
   },
   {
     id: 'p2',
@@ -23,8 +39,24 @@ export const LARGE_PROJECTS: Project[] = [
     category: 'Game design, mobile application',
     description: "In order to relieve people's bad emotions during commuting, combined with my own work experience, this project will start from the commuting scene and use the methods of art healing games and breathing rhythm exercises to solve the problem.",
     imageUrl: '/Images/P2.png',
+    detailImageUrl: '/Images/P2-detail.png',
     year: '2024',
     tags: ['Audio visualization', 'TouchDesigner', 'Arduino'],
+    content: [
+      {
+        title: 'The Challenge',
+        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+      },
+      {
+        title: 'The Solution',
+        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
+        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+      },
+      {
+        title: 'User Testing',
+        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
+      }
+    ]
   },
   {
     id: 'p3',
@@ -32,8 +64,24 @@ export const LARGE_PROJECTS: Project[] = [
     category: 'Interactive design, Industrial design, Wearable design',
     description: 'I came up with an idea for a device that mimics the sensation of self-harm without causing real damage, combined with software that helps users reflect on their emotions afterward, encouraging a positive, healing cycle.',
     imageUrl: '/Images/P3.png',
+    detailImageUrl: '/Images/P3-detail.png',
     year: '2025',
     tags: ['Product', 'Psychology', 'Mental Health'],
+    content: [
+      {
+        title: 'The Challenge',
+        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+      },
+      {
+        title: 'The Solution',
+        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
+        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+      },
+      {
+        title: 'User Testing',
+        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
+      }
+    ]
   },
   {
     id: 'p4',
@@ -41,8 +89,49 @@ export const LARGE_PROJECTS: Project[] = [
     category: 'Speculative design, Service design',
     description: 'This speculative project examines how AI-driven societies may impact human identity, digital memory, and personal agency.',
     imageUrl: '/Images/P4.png',
+    detailImageUrl: '/Images/P4-detail.png',
     year: '2025',
     tags: ['Future', 'Game', 'Immersive'],
+    content: [
+      {
+        title: 'The Challenge',
+        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+      },
+      {
+        title: 'The Solution',
+        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
+        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+      },
+      {
+        title: 'User Testing',
+        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
+      }
+    ]
+  },
+  {
+    id: 'p5',
+    title: 'Gloco Lens',
+    category: 'Branding, Visual Identity, Web Design',
+    description: 'I have established a brand-new visual system for the international beauty contact brand, GLOCO LENS. The beauty contact products adopt the most advanced MPC material at present, providing customers with natural beauty with a unique oxygen permeability rate, enhancing and magnifying the characteristics of each persons own eyes, and shining with beautiful light',
+    imageUrl: '/Images/P5.png',
+    detailImageUrl: '/Images/P5-detail.png',
+    year: '2025',
+    tags: ['Visual', 'Shopify', 'Beauty'],
+    content: [
+      {
+        title: 'The Challenge',
+        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+      },
+      {
+        title: 'The Solution',
+        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
+        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+      },
+      {
+        title: 'User Testing',
+        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
+      }
+    ]
   },
 ];
 
@@ -94,6 +183,13 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: 'e3',
+    role: 'Visual Design Intern',
+    company: 'TRANSSNET',
+    period: 'Mar 2023 - Aug 2023',
+    description: 'Designed and implemented key visuals for digital marketing campaigns, customizing graphics to enhance user engagement. Edited and optimized video ads by analyzing user behavior and performance data, increasing click-through rates. Created dynamic animations for live-stream gifts, contributing to platform monetization.'
+  },
+    {
+    id: 'e4',
     role: 'Visual Design Intern',
     company: 'TRANSSNET',
     period: 'Mar 2023 - Aug 2023',

@@ -1,12 +1,20 @@
+export interface ProjectContent {
+  title?: string;
+  text: string;
+  imageUrl?: string;
+}
+
 export interface Project {
   id: string;
   title: string;
   category: string;
   description: string;
   imageUrl: string;
+  detailImageUrl?: string;
   year: string;
   tags: string[];
   link?: string;
+  content?: ProjectContent[];
 }
 
 export interface Experience {
