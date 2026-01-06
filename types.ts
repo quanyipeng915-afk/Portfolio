@@ -1,7 +1,11 @@
 export interface ProjectContent {
   title?: string;
+  subtitle?: string; // New: Second title
   text: string;
   imageUrl?: string;
+  image2Url?: string; // New: For 2 images/row layout
+  highlight?: boolean; 
+  imageLayout?: 'full' | 'normal' | 'grid'; // New: Control image layout
 }
 
 export interface Project {
@@ -12,6 +16,9 @@ export interface Project {
   imageUrl: string;
   detailImageUrl?: string;
   year: string;
+  role?: string;        // New field
+  timeline?: string;    // New field
+  collaborators?: string[]; // New field
   tags: string[];
   link?: string;
   content?: ProjectContent[];

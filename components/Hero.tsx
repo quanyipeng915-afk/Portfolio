@@ -21,9 +21,21 @@ export const Hero: React.FC = () => {
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[1.1] mb-8">
           Crafting <span className="italic text-stone-400">digital experiences</span> that balance beauty & utility.
         </h1>
-        <p className="text-lg md:text-2xl text-stone-600 max-w-2xl leading-relaxed mb-12">
+        <p className="text-lg md:text-2xl text-stone-600 max-w-2xl leading-relaxed mb-8">
           I am a Senior UI/UX Designer specializing in building scalable design systems and intuitive user interfaces for complex products.
         </p>
+
+        {/* Skill Pills */}
+        <div className="flex flex-wrap gap-3 mb-12">
+          {['PRODUCT DESIGN', 'STRATEGY', 'PROTOTYPING', 'STORYTELLING', 'MOTION'].map((skill) => (
+            <span 
+              key={skill} 
+              className="px-3 py-1 border border-stone-200 rounded-full text-xs font-medium text-stone-500 tracking-wider hover:border-stone-400 hover:text-stone-700 transition-colors cursor-default"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
         
         <div className="flex gap-4">
           <a
