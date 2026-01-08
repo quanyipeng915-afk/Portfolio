@@ -28,25 +28,69 @@ export const LARGE_PROJECTS: Project[] = [
       },
       {
         title: 'Background',
-        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
-        imageLayout: 'full',
-        imageUrl: '/Images/P1.png'
-      },
-      {
-        title: 'Research & Insights',
-        subtitle: 'An additional layer of security',
-        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
-        imageLayout: 'grid',
-        imageUrl: 'https://picsum.photos/seed/paws1/800/600',
-        image2Url: 'https://picsum.photos/seed/paws2/800/600'
-      },
-      {
-        title: 'Impact',
-        subtitle: 'Trust & safety for millions',
-        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents.',
+        subtitle: 'The popularity of “Electronic Parents” on social media', 
+        text: 'In September 2023, first-person videos of parents interacting with viewers appeared on TikTok. English blogger @Cherdleys posted "POV: your dad loves you" videos, gaining significant attention. Meanwhile, Chinese blogger @和女儿分享日常, featuring a middle-aged couple, depicted typical youth experiences, showing how "loving" parents handle them. This content quickly gained 100,000 followers in a month and is known in China as “Electronic Parents.”',
         imageLayout: 'normal',
-        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' 
-      }
+        imageUrl: '/Images/P1/P1-1.png',
+      },
+      {
+        subtitle: 'Problems about the family of origin behind “Electronic Parents”',
+        text: 'Family and familial affection offer emotional sustenance, like safety and belonging. “Electronic Parents” bloggers create an imaginative version of family affection for users. In comments, real parents often appear opposite to electronic parents.\n\nThis suggests common issues in family relationships among the younger generation, with the main difference being in parenting styles compared to electronic parents.',
+        imageLayout: 'full',
+        imageUrl: '/Images/P1/P1-2.png',
+      },
+      {
+        title: 'Research',
+        subtitle: 'Questionnaire survey on “Electronic Parents”',
+        text: 'To verify and conduct further research, I designed an online questionnaire to find out what people really think about the “Electronic Parents” phenomenon. The questionnaire consists of 15 questions, and a total of 136 valid responses were collected. The key questions are selected and displayed here.',
+        imageLayout: 'full',
+        imageUrl: '/Images/P1/P1-3.png',
+      },
+      {
+        subtitle: 'Interview insights',
+        text: 'Family and familial affection offer emotional sustenance, like safety and belonging. “Electronic Parents” bloggers create an imaginative version of family affection for users. In comments, real parents often appear opposite to electronic parents.\n\nThis suggests common issues in family relationships among the younger generation, with the main difference being in parenting styles compared to electronic parents.',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-4.png'
+      },
+      {
+        title: 'Empathy Map',
+        text: '<strong style="color: #B0743B">For Children:</strong> Children who want to express their emotions and feelings more openly to their parents, or who have negative emotions due to family relationships.\n\n<strong style="color: #B0743B">For Parents:</strong> Parents who want to improve their contact and communication with their children and are hot-tempered.',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-5(1).png',
+        image2Url: '/Images/P1/P1-5(2).png',
+      },
+      {
+        title: 'Design Thinking',
+        subtitle: 'Design Brief & Brainstorming',
+        text:'',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-6.png',
+      },
+      {
+        subtitle: 'Concept & Storyboard',
+        text: 'This design aims to enhance emotional connections between parents and children through gentle touch, helping users feel cared for and understood.',
+        imageLayout: 'normal',
+        image2Url: '/Images/P1/P1-7.png',
+      },
+      {
+        subtitle: 'Design Development',
+        text: '',
+        imageLayout: 'normal',
+        image2Url: '/Images/P1/P1-8.png',
+      },
+      {
+        title: 'Final Design',
+        text: '',
+        subtitle: 'Wireframes',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-9.png',
+      },
+      {
+        text: '',
+        subtitle: 'Moodboard & Visual Specifications',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-10.png',
+      },
     ]
   },
   {

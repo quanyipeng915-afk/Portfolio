@@ -37,7 +37,7 @@ export const ProjectPage: React.FC = () => {
       {/* Fixed Back Button */}
       <Link 
         to="/" 
-        className="fixed left-6 md:left-10 top-24 z-30 inline-flex items-center gap-3 px-8 py-4 hover:bg-stone-200 text-stone-500 hover:text-orange-600 text-lg rounded-full transition-all group"
+        className="fixed left-4 md:left-8 top-24 z-40 inline-flex items-center gap-2 px-6 py-4 bg-transparent hover:bg-[#F2F2F2] text-stone-500 hover:text-orange-600 rounded-full transition-all group"
       >
         <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
         Back
@@ -124,9 +124,15 @@ export const ProjectPage: React.FC = () => {
           </div>
 
           {/* Dynamic Content Sections */}
-          <div className="space-y-24">
+          <div className="flex flex-col">
             {project.content?.map((section, idx) => (
-              <div key={idx} className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-12 lg:gap-x-24 pt-12 border-t border-stone-200">
+              <div 
+                key={idx} 
+                className={`grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-12 lg:gap-x-24
+                  ${section.title ? 'pt-12 mt-24 border-t border-stone-200' : 'mt-12'}
+                  ${idx === 0 ? '!mt-0' : ''}
+                `}
+              >
                 {/* Left: Section Title */}
                 <div className="md:col-span-5">
                   {section.title && (
@@ -146,24 +152,39 @@ export const ProjectPage: React.FC = () => {
                    )}
 
                    {/* Text Content */}
-                   <p className={`whitespace-pre-line leading-relaxed mb-8 ${
-                     section.highlight 
-                       ? 'text-xl md:text-2xl font-serif text-stone-800 leading-snug' 
-                       : 'text-base text-stone-600'
-                   }`}>
-                    {section.text}
-                  </p>
+                   <p 
+                     className={`whitespace-pre-line leading-relaxed mb-8 ${
+                       section.highlight 
+                         ? 'text-xl md:text-2xl font-serif text-stone-800 leading-snug' 
+                         : 'text-base text-stone-600'
+                     }`}
+                     dangerouslySetInnerHTML={{ __html: section.text }} 
+                   />
                   
                   {/* Images Handling based on Layout */}
                   {/* 1. Normal Layout (Default) - Fits text width */}
-                  {(!section.imageLayout || section.imageLayout === 'normal') && section.imageUrl && (
-                    <div className="rounded-2xl overflow-hidden shadow-sm bg-stone-50">
-                      <img 
-                        src={section.imageUrl} 
-                        alt={section.title || 'Project detail'} 
-                        className="w-full h-auto object-cover"
-                      />
-                    </div>
+                  {(!section.imageLayout || section.imageLayout === 'normal') && (
+                    <>
+                      {section.imageUrl && (
+                        <div className="overflow-hidden shadow-sm bg-stone-50 mb-6 last:mb-0">
+                          <img 
+                            src={section.imageUrl} 
+                            alt={section.title || 'Project detail'} 
+                            className="w-full h-auto object-cover"
+                          />
+                        </div>
+                      )}
+                      
+                      {section.image2Url && (
+                        <div className="overflow-hidden shadow-sm bg-stone-50 mb-6 last:mb-0">
+                          <img 
+                            src={section.image2Url} 
+                            alt={section.title || 'Project detail 2'} 
+                            className="w-full h-auto object-cover"
+                          />
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
 
@@ -171,7 +192,7 @@ export const ProjectPage: React.FC = () => {
                 {section.imageLayout === 'grid' && (
                   <div className="md:col-span-12 mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                     {section.imageUrl && (
-                      <div className="rounded-2xl overflow-hidden shadow-sm bg-stone-50 aspect-video">
+                      <div className="overflow-hidden shadow-sm bg-stone-50 aspect-video">
                         <img 
                           src={section.imageUrl} 
                           alt="Detail 1" 
@@ -180,7 +201,7 @@ export const ProjectPage: React.FC = () => {
                       </div>
                     )}
                     {section.image2Url && (
-                      <div className="rounded-2xl overflow-hidden shadow-sm bg-stone-50 aspect-video">
+                      <div className="overflow-hidden shadow-sm bg-stone-50 aspect-video">
                         <img 
                           src={section.image2Url} 
                           alt="Detail 2" 
@@ -192,14 +213,27 @@ export const ProjectPage: React.FC = () => {
                 )}
 
                 {/* 3. Full Width Layout - Spans entire container */}
-                {section.imageLayout === 'full' && section.imageUrl && (
-                  <div className="md:col-span-12 mt-4 rounded-2xl overflow-hidden shadow-sm bg-stone-50">
-                    <img 
-                      src={section.imageUrl} 
-                      alt={section.title || 'Full width detail'} 
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
+                {section.imageLayout === 'full' && (
+                  <>
+                    {section.imageUrl && (
+                      <div className="md:col-span-12 mt-4 overflow-hidden shadow-sm bg-stone-50">
+                        <img 
+                          src={section.imageUrl} 
+                          alt={section.title || 'Full width detail'} 
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    )}
+                    {section.image2Url && (
+                      <div className="md:col-span-12 mt-4 overflow-hidden shadow-sm bg-stone-50">
+                        <img 
+                          src={section.image2Url} 
+                          alt={(section.title || 'Full width detail')} 
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             ))}
