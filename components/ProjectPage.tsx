@@ -146,9 +146,10 @@ export const ProjectPage: React.FC = () => {
                 <div className="md:col-span-7">
                    {/* Subtitle (Second Title) */}
                    {section.subtitle && (
-                     <h4 className="text-2xl font-serif text-stone-800 mb-6">
-                       {section.subtitle}
-                     </h4>
+                     <h4 
+                       className="text-2xl font-serif text-stone-800 mb-6"
+                       dangerouslySetInnerHTML={{ __html: section.subtitle }}
+                     />
                    )}
 
                    {/* Text Content */}

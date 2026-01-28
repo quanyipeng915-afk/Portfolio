@@ -1,4 +1,6 @@
+import { Replace } from "lucide-react";
 import { Experience, Project } from "./types";
+import { text } from "stream/consumers";
 
 export const NAV_LINKS = [
   { label: 'Work', href: '#work' },
@@ -21,11 +23,7 @@ export const LARGE_PROJECTS: Project[] = [
     collaborators: ['None'],
     tags: ['Figma', 'Arduino', 'LLM', 'Parent-child communication'],
     content: [
-      {
-        title: 'Problem',
-        text: 'Recognising this gap, we saw this as a massive opportunity to help users regain control of what their phone says about them.',
-        highlight: true
-      },
+
       {
         title: 'Background',
         subtitle: 'The popularity of “Electronic Parents” on social media', 
@@ -70,13 +68,13 @@ export const LARGE_PROJECTS: Project[] = [
         subtitle: 'Concept & Storyboard',
         text: 'This design aims to enhance emotional connections between parents and children through gentle touch, helping users feel cared for and understood.',
         imageLayout: 'normal',
-        image2Url: '/Images/P1/P1-7.png',
+        imageUrl: '/Images/P1/P1-7.png',
       },
       {
         subtitle: 'Design Development',
         text: '',
         imageLayout: 'normal',
-        image2Url: '/Images/P1/P1-8.png',
+        imageUrl: '/Images/P1/P1-8.png',
       },
       {
         title: 'Final Design',
@@ -91,6 +89,33 @@ export const LARGE_PROJECTS: Project[] = [
         imageLayout: 'normal',
         imageUrl: '/Images/P1/P1-10.png',
       },
+      {
+        text: '',
+        subtitle: 'High-fidelity Prototype',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-11.png',
+        image2Url: '/Images/P1/P1-12.png',
+      },
+      {
+        text: 'Through the interactive AI dialogue system and mini wireless printer, the channel of parent-child communication is formed. The cute appearance and soft fabric soften the indirect communication process between the two sides.',
+        subtitle: 'Product Development',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-13.png',
+      },
+      {
+        text: '',
+        subtitle: 'Function Development',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P1/P1-14.png',
+        image2Url: '/Images/P1/P1-15.png',
+      },
+      {
+        title: 'How It Works',
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P1/P1-16.png',
+        image2Url: '/Images/P1/P1-17.png',
+      }
     ]
   },
   {
@@ -106,18 +131,126 @@ export const LARGE_PROJECTS: Project[] = [
     link: 'https://youtu.be/4gfHU--S_2E', 
     content: [
       {
-        title: 'The Challenge',
-        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+        title: 'Background',
+        subtitle: 'Definition of extreme commuting and its impact on emotional health', 
+        text: 'A 45-minute commute is globally recognized as an ideal cut-off, with a commute of more than 60 minutes defined as "extreme commuting." "Difficult commute" in big cities has become an increasingly prominent problem for office workers. \n A study of more than 34,000 workers across a range of industries in the UK, conducted by vititalityhealth, the University of Cambridge, RAND Europe and Mercer, Examined the impact of commuting on employee health and productivity.',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-1.png',
       },
       {
-        title: 'The Solution',
-        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
-        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+        subtitle: 'Average commuting time in China',
+        text: 'According to the 2023 Commuter Monitoring Report of Major Cities in China, the proportion of people who commute for more than 60 minutes in major cities in China is 12%, which is flat year-on-year, and more than 14 million people are still subjected to extreme commuting.',
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-2.png',
       },
       {
-        title: 'User Testing',
-        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
-      }
+        title: 'Primary Research',
+        subtitle: 'Questionnaire',
+        text: 'Based on the desktop research, I designed a 10-question questionnaire to initially explore the impact of commuting time on mood. The survey surveyed 128 people, 95% of whom were 18-35 years old. Here are the numbers for the four key questions.',
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-3.png' // Replace with your actual image path
+      },
+      {
+        text: "In order to further understand people's experiences during commuting and ways to alleviate emotional health problems, I conducted follow up interviews with 7 people who answered the questionnaire.",
+        subtitle: 'Online Interview',
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-4.png',
+      },
+      {
+        title: 'Analysis',
+        subtitle: 'Personas',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-5.png',
+      },
+      {
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-6.png',
+      },
+      {
+        title: 'Experienment',
+        text: 'In order to explore the different effects of hearing and touching on emotions and whether there is synaesthesia between hearing and other senses. I conducted an experiment to test whether people felt differently by controlling for different variables of music and material in Yuniaoji community in Hangzhou.',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-7.png' // Replace with your actual image path
+      },
+      {
+        subtitle: 'Experiment steps & materials',
+        text: "I took a few music from musicbed's mood categories, and the results showed that people didn't necessarily have the same emotional response as they were supposed to.",
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-8.png',
+        image2Url: '/Images/P2/P2-9.png'
+      },
+      {
+        text: "",
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-10.png',
+        image2Url: '/Images/P2/P2-11.png'
+      },
+      {
+        subtitle: "Bertin's matrices",
+        text: "",
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-12.png',
+      },
+      {
+        title: 'Summary',
+        text: "The chaotic environment during a commute can affect a passenger's mood.\nMost people carry headphones with them when they commute.\nRest and recreation are the main needs of people on the commute.\nStress at work can easily spill over into the home.",
+      },
+      {
+        title: 'Demand tree',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-13.png',
+      },
+      {
+        title: 'Development',
+        text: 'I propose 3 options for interviewees to choose:',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-14.png',
+      },
+      {
+        title: 'Final Proposal',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-15.png',
+      },
+      {
+        title: 'Visual Design',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-16.png',
+      },
+      {
+        title: 'Game Flow Chart',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-17.png',
+      },
+      {
+        title: 'Interactive Flow Chart',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P2/P2-18.png',
+      },
+      {
+        title: 'Game Interface',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-19.png',
+      },
+      {
+        title: 'Final Display',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-20.png',
+      },
+      {
+        title: 'TouchDesigner',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P2/P2-21.png',
+      },
     ]
   },
   {
@@ -131,18 +264,108 @@ export const LARGE_PROJECTS: Project[] = [
     tags: ['Product', 'Psychology', 'Mental Health'],
     content: [
       {
-        title: 'The Challenge',
-        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+        title: 'Background',
+        subtitle: 'What is NSSI?',
+        text: "Non-suicidal self-injury (NSSI) is the deliberate, self-inflicted destruction of body tissue resulting in immediate damage, without suicidal intent and for purposes not culturally sanctioned.\nNSSI can significantly increase the risk of suicide. Studies show that compared with other groups, NSSI groups have 4.2 times more suicidal ideation, 1.1 times more suicide planning, and 4.8 times more risk of suicide attempt.",
+
       },
       {
-        title: 'The Solution',
-        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
-        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+        subtitle: "Target populations and Risk factors",
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P3/P3-1.png' // Replace with your actual image path
       },
       {
-        title: 'User Testing',
-        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
-      }
+        subtitle:"NSSI methods",
+        text: 'According to 4 qualitative studies, cutting has also been reported as the most common NSSI method (65.0%–95.7%) among Chinese adolescents.',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P3/P3-2.png' // Replace with your actual image path
+      },
+      {
+        subtitle:"The intervention strategies",
+        text: 'The most commonly used intervention strategies were Cognitive behavioral therapy (CBT) and Dialectical behavior therapy (DBT).',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P3/P3-3.png' // Replace with your actual image path
+      },
+      {
+        title:"Expert Interview",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-4.png' // Replace with your actual image path
+      },
+      {
+        title:"User Interview",
+        text:'',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P3/P3-5.png' // Replace with your actual image path
+      },
+      {
+        title:"Empathy Map",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-6.png' // Replace with your actual image path
+      },
+      {
+        title:"User Journey Map",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-7.png' // Replace with your actual image path
+      },
+      {
+        title:"Design Direction",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-8.png' // Replace with your actual image path
+      },
+      {
+        title:"Ideation",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-9.png' // Replace with your actual image path
+      },
+      {
+        title:"Development",
+        subtitle:"Wearable device design",
+        text:'Since self-injurious behavior often targets the hands and the hands are easily accessible, the device is designed an arm sleeve. This serves both to assist in reducing self-harm behavior and to protect the forearm. If bleeding occurs, the wrap can help to stop the bleeding.',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-10.png' // Replace with your actual image path
+      },
+      {
+        subtitle:"Information Architecture",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-11.png' // Replace with your actual image path
+      },
+      {
+        subtitle:"Low-Fi",
+        text:'',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P3/P3-12.png' // Replace with your actual image path
+      },
+      {
+        subtitle:"UI specification",
+        text:'',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P3/P3-13.png' // Replace with your actual image path
+      },
+      {
+        subtitle:"High-Fi",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-14.png' // Replace with your actual image path
+      },
+      {
+        title:"How does it work",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-15.png' // Replace with your actual image path
+      },
+      {
+        title:"Using Scenario",
+        text:'',
+        imageLayout: 'full',
+        imageUrl: '/Images/P3/P3-16.png' // Replace with your actual image path
+      },
     ]
   },
   {
@@ -156,18 +379,55 @@ export const LARGE_PROJECTS: Project[] = [
     tags: ['Future', 'Game', 'Immersive'],
     content: [
       {
-        title: 'The Challenge',
-        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+        title: 'Background',
+        subtitle: 'Development of artificial intelligence',
+        text: 'In December 2022, OpenAI launched the artificial intelligence Chatbot project ChatGPT, ushering in the epochal first year of artificial intelligence - since 2023, we have witnessed unprecedented changes brought about by artificial intelligence technology in multiple fields.\nStaff at the International Monetary Fund found that nearly 40 percent of jobs worldwide will be affected by AI. In advanced economies, about 60 percent of jobs could be affected by AI.',
       },
       {
-        title: 'The Solution',
-        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
-        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+        subtitle: 'Impact',
+        text: 'AI has enhanced automation, potentially reducing labor demand while increasing efficiency, leading to lower wages, fewer jobs, and the possible disappearance of some roles.',
+        imageLayout: 'full',
+        imageUrl: '/Images/P4/P4-1.png' // Replace with your actual image path
       },
       {
-        title: 'User Testing',
-        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
-      }
+        subtitle: 'Speculation',
+        text: "How will AI reshape the <b>social division of labor</b>\nWhen AI is applied at scale in all fields, how will the <b>structure of society</b> change\nWhat <b>legal and ethical challenges</b> will the age of artificial intelligence face, and how should we respond\nWhat will happen to people's <b>living standards</b>",
+        
+      },
+      {
+        title: 'Speculating',
+        subtitle: 'Timeline & Future cone',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P4/P4-2.png' // Replace with your actual image path
+      },
+      {
+        subtitle: 'Possible',
+        text: 'Conflicts between the poor have intensified\nThe environment has deteriorated due to the energy consumption of AI\nEverything in life has become <b><span style="color: #32C0E6">gamified</span></b>, and video games have become the most common entertainment',
+       
+      },
+      {
+        subtitle: 'Plausible',
+        text: '<b><span style="color: #32C0E6">Technology companies</span></b> have more say than ever before, and governments need to rely on their country\'s head companies to game or cooperate\nThere is also a need to improve <b><span style="color: #32C0E6">digital security</span></b>',
+       
+      },
+      {
+        subtitle: 'Probable',
+        text: 'The early adoption of new technology among the elite has increased <b><span style="color: #32C0E6">class solidification</span></b>\nHuman-machine technology led to the first wave of social stratification, with those who had access and were willing to experiment with new technologies gaining neural enhancement and becoming a <b><span style="color: #32C0E6">new elite group</span></b>\nThe AI governance system is heavily biased toward controlling its elite and becomes a tool for maintaining class solidification',
+       
+      },
+      {
+        subtitle: '<b><span style="color: #F656F2">Preferable</span></b>',
+        text: '<b><span style="color: #F656F2">AI repair technicians</span></b> has become a hot and stable job, and many middle and lower class people expect to improve their quality of life through it\nDue to the popularity of natural language programming systems, the average maintenance repair technicians actually does not have much CS experience, and those who fully master and are good at writing computer languages belong to the <b><span style="color: #F656F2">engineer talent</span></b>\nAI errors can be attributed to the maintenance personnel involved, but this practice is also controversial',
+       
+      },
+      {
+        subtitle: 'Summary',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P4/P4-3.png'
+       
+      },
     ]
   },
   {
