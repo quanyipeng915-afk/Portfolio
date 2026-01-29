@@ -31,6 +31,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1] }}
               src={resolvePath(project.imageUrl)}
               alt={project.title}
+              loading="lazy"
               className="object-cover w-full h-full"
             />
             <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-stone-800 uppercase tracking-wider">

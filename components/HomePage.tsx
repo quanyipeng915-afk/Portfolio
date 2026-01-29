@@ -62,24 +62,52 @@ export const HomePage: React.FC = () => {
             <p className="text-stone-400 text-xl mb-12 max-w-xl mx-auto">
               I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
             </p>
-            <a 
-              href="mailto:quanyipeng915@gmail.com"
-              className="inline-block bg-white text-stone-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-200 transition-colors mb-20"
-            >
-              Say Hello
-            </a>
 
-            <div className="flex justify-center gap-8 mb-12">
-              {SOCIAL_LINKS.map(link => (
-                <a 
-                  key={link.name} 
-                  href={link.url}
-                  className="text-stone-400 hover:text-white transition-colors flex items-center gap-1 group"
-                >
-                  {link.name}
-                  <ArrowUpRight className="w-3 h-3 transition-transform group-hover:-translate-y-1 group-hover:translate-x-0.5" />
-                </a>
-              ))}
+            <div className="flex flex-col items-center gap-8 md:gap-12 mb-20 bg-stone-800/50 p-8 rounded-3xl border border-stone-800">
+               {/* Contact Information */}
+               <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-lg text-center md:text-left w-full justify-center">
+                  
+                  {/* Phone */}
+                  <div className="flex flex-col gap-2 items-center md:items-start">
+                    <span className="text-stone-500 text-xs uppercase tracking-widest font-medium">Phone</span>
+                    <div className="flex flex-col gap-1">
+                      <a href="tel:+85244910942" className="hover:text-orange-400 transition-colors">+852 4491-0942</a>
+                      <a href="tel:+8615606718276" className="hover:text-orange-400 transition-colors">+86 156-0671-8276</a>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex flex-col gap-2 items-center md:items-start">
+                    <span className="text-stone-500 text-xs uppercase tracking-widest font-medium">Email</span>
+                    <div className="flex flex-col gap-1">
+                      <a href="mailto:quanyipeng915@gmail.com" className="hover:text-orange-400 transition-colors">quanyipeng915@gmail.com</a>
+                      <a href="mailto:quanyi.peng@connect.polyu.hk" className="hover:text-orange-400 transition-colors">quanyi.peng@connect.polyu.hk</a>
+                    </div>
+                  </div>
+               </div>
+               
+               {/* Socials & WeChat */}
+               <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-lg text-center md:text-left w-full justify-center border-t border-stone-700 pt-8">
+                  
+                  {/* Social Media */}
+                  <div className="flex flex-col gap-2 items-center md:items-start">
+                     <span className="text-stone-500 text-xs uppercase tracking-widest font-medium">Social Media</span>
+                     <div className="flex gap-6">
+                         <a href="https://www.linkedin.com/in/quanyi-peng-26b42a279/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                            LinkedIn <ArrowUpRight className="w-4 h-4" />
+                         </a>
+                         <a href="https://www.instagram.com/quanyi_0915/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                            Instagram <ArrowUpRight className="w-4 h-4" />
+                         </a>
+                     </div>
+                  </div>
+
+                  {/* WeChat */}
+                  <div className="flex flex-col gap-2 items-center md:items-start">
+                     <span className="text-stone-500 text-xs uppercase tracking-widest font-medium">WeChat</span>
+                     <span className="select-all cursor-pointer hover:text-orange-400 transition-colors font-medium">PQYEVA</span>
+                  </div>
+               </div>
             </div>
             
             <div className="text-stone-600 text-sm">

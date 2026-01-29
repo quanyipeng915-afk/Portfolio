@@ -74,6 +74,7 @@ export const ProjectPage: React.FC = () => {
               src={resolvePath(project.detailImageUrl || project.imageUrl)} 
               alt={project.title} 
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
 
@@ -177,6 +178,7 @@ export const ProjectPage: React.FC = () => {
                             src={resolvePath(section.imageUrl)} 
                             alt={section.title || 'Project detail'} 
                             className="w-full h-auto object-cover"
+                            loading="lazy"
                           />
                         </div>
                       )}
@@ -187,6 +189,7 @@ export const ProjectPage: React.FC = () => {
                             src={resolvePath(section.image2Url)} 
                             alt={section.title || 'Project detail 2'} 
                             className="w-full h-auto object-cover"
+                            loading="lazy"
                           />
                         </div>
                       )}
@@ -213,6 +216,7 @@ export const ProjectPage: React.FC = () => {
                           src={resolvePath(section.imageUrl)} 
                           alt="Detail 1" 
                           className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -222,6 +226,7 @@ export const ProjectPage: React.FC = () => {
                           src={resolvePath(section.image2Url)} 
                           alt="Detail 2" 
                           className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -237,6 +242,7 @@ export const ProjectPage: React.FC = () => {
                           src={resolvePath(section.imageUrl)} 
                           alt={section.title || 'Full width detail'} 
                           className="w-full h-auto object-cover"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -246,6 +252,7 @@ export const ProjectPage: React.FC = () => {
                           src={resolvePath(section.image2Url)} 
                           alt={(section.title || 'Full width detail')} 
                           className="w-full h-auto object-cover"
+                          loading="lazy"
                         />
                       </div>
                     )}
