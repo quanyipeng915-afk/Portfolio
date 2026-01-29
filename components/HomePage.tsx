@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Hero } from './Hero';
 import { Navigation } from './Navigation';
 import { ProjectCard } from './ProjectCard';
@@ -7,8 +7,31 @@ import { About } from './About';
 import { ChatAssistant } from './ChatAssistant';
 import { LARGE_PROJECTS, SMALL_PROJECTS, SOCIAL_LINKS } from '../constants';
 import { ArrowUpRight } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 export const HomePage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if there is a hash or state to scroll to
+    if (location.state && location.state.scrollTo) {
+        const element = document.getElementById(location.state.scrollTo);
+        if (element) {
+            setTimeout(() => {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    } else if (location.hash) {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+            setTimeout(() => {
+                 element.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    }
+  }, [location]);
+
   return (
     <div className="bg-stone-50 min-h-screen relative selection:bg-orange-200">
       <Navigation />
