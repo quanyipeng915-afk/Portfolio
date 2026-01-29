@@ -8,6 +8,12 @@ const App: React.FC = () => {
     <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {/* Helper routes for direct linking to sections */}
+        <Route path="/work" element={<HomePage />} />
+        <Route path="/playground" element={<HomePage />} />
+        <Route path="/about" element={<HomePage />} />
+        <Route path="/contact" element={<HomePage />} />
+        
         <Route path="/project/:id" element={<ProjectPage />} />
       </Routes>
     </HashRouter>

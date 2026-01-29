@@ -13,7 +13,7 @@ export const HomePage: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Check if there is a hash or state to scroll to
+    // 1. Handle state-based scrolling (from Navigation clicks)
     if (location.state && location.state.scrollTo) {
         const element = document.getElementById(location.state.scrollTo);
         if (element) {
@@ -21,9 +21,16 @@ export const HomePage: React.FC = () => {
                 element.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         }
-    } else if (location.hash) {
-        const id = location.hash.replace('#', '');
-        const element = document.getElementById(id);
+        return;
+    } 
+
+    // 2. Handle direct URL access (e.g., /#contact -> route is /contact)
+    // HashRouter treats parts after # as paths.
+    // Clean path string (remove leading slash)
+    const currentPath = location.pathname.startsWith('/') ? location.pathname.slice(1) : location.pathname;
+    
+    if (['work', 'playground', 'about', 'contact', 'hero'].includes(currentPath)) {
+        const element = document.getElementById(currentPath);
         if (element) {
             setTimeout(() => {
                  element.scrollIntoView({ behavior: 'smooth' });
