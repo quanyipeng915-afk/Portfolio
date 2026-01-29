@@ -428,6 +428,38 @@ export const LARGE_PROJECTS: Project[] = [
         imageUrl: '/Images/P4/P4-3.png'
        
       },
+      {
+        title: 'The Future',
+        subtitle: 'Context & Storyboard',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P4/P4-4.png'
+      },
+      {
+        title: 'Ideation',
+        subtitle: 'Brainstorming',
+        text: '',
+        imageLayout: 'normal',
+        imageUrl: '/Images/P4/P4-6.png'
+      },
+      {
+        subtitle: 'System map',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P4/P4-7.png',
+      },
+      {
+        title: 'Pre-game screen',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P4/P4-8.png'
+      },
+      {
+        title: 'Service blueprint',
+        text: '',
+        imageLayout: 'full',
+        imageUrl: '/Images/P4/P4-9.png'
+      },
     ]
   },
   {
@@ -441,18 +473,20 @@ export const LARGE_PROJECTS: Project[] = [
     tags: ['Visual', 'Shopify', 'Beauty'],
     content: [
       {
-        title: 'The Challenge',
-        text: 'Modern families often struggle with meaningful communication. Parents and children may feel disconnected due to busy schedules and digital distractions. The goal was to create a bridge that feels playful and non-intrusive.',
+        text: '',
+        imageUrl : '/Images/P5/P5-1.png', // 
+        imageLayout: 'full',
       },
       {
-        title: 'The Solution',
-        text: 'We developed a system of interactive "paws" that light up and react to touch. When a parent touches their paw, the child\'s paw glows, creating a sense of presence without requiring a phone call or text message.',
-        imageUrl: 'https://picsum.photos/seed/paws-detail/800/600' // Replace with your actual image path
+        text: '',
+        imageUrl : '/Images/P5/P5-2.png', // 
+        imageLayout: 'full',
       },
       {
-        title: 'User Testing',
-        text: 'Testing with 10 families showed a 40% increase in daily interactions. Children reported feeling more connected to their parents, and parents appreciated the low-pressure way to check in.',
-      }
+        text: '',
+        imageUrl : '/Images/P5/P5-3.png', // 
+        imageLayout: 'full',
+      },
     ]
   },
 ];
@@ -466,6 +500,26 @@ export const SMALL_PROJECTS: Project[] = [
     imageUrl: '/Images/pray.png',
     year: '2022',
     tags: ['Game', 'Unity', 'Character Design'],
+    content: [
+      {
+        title: 'Character line up',
+        text: '',
+        imageUrl : '/Images/S1/S1-1.png', // 
+        imageLayout: 'full',
+      },
+      {
+        title: 'Gameplay',
+        text: '',
+        imageUrl : '/Images/S1/S1-2.png', // 
+        imageLayout: 'full',
+      },
+      {
+        title: 'Exhibition',
+        text: '',
+        imageUrl: '/Images/S1/S1-3.png', // Path to your video file
+        imageLayout: 'full', // 'full' or 'normal'
+      },
+    ],
   },
   {
     id: 's2',
@@ -475,6 +529,21 @@ export const SMALL_PROJECTS: Project[] = [
     imageUrl: '/Images/podcast.png',
     year: '2022',
     tags: ['User Interface', 'Branding'],
+    content: [
+      {
+        title: 'Visual Design',
+        text: '',
+        imageUrl : '/Images/S2/S2-1.png', // 
+        imageLayout: 'full',
+      },
+      {
+        title: 'Hi-Fi Prototype',
+        text: '',
+        imageUrl : '/Images/S2/S2-2.png', // 
+        imageLayout: 'full',
+      },
+      
+    ],
   },
   {
     id: 's3',
@@ -484,6 +553,32 @@ export const SMALL_PROJECTS: Project[] = [
     imageUrl: '/Images/Book.png',
     year: '2023',
     tags: ['After Effects'],
+    content: [
+      {
+        title: 'Book Design',
+        text: '',
+        imageUrl : '/Images/S3/S3-1.png', // 
+        imageLayout: 'normal',
+      },
+      {
+        text: '',
+        imageUrl : '/Images/S3/S3-2.png', // 
+        imageLayout: 'full',
+      },
+      {
+        title: 'Exhibition',
+        subtitle: 'July 12-13th, 2022 in China Academy of Art, Hangzhou',
+        text: '',
+        imageUrl : '/Images/S3/S3-3.png', // 
+        imageLayout: 'full',
+      },
+      {
+        subtitle: 'Dec 8-10th, 2023 in Design360° Festival, Hangzhou',
+        text: '',
+        imageUrl : '/Images/S3/S3-4.png', // 
+        imageLayout: 'full',
+      },
+    ],
   },
 
 ];

@@ -4,6 +4,7 @@ export interface ProjectContent {
   text: string;
   imageUrl?: string;
   image2Url?: string; // New: For 2 images/row layout
+  videoUrl?: string; // New: For playing videos
   highlight?: boolean; 
   imageLayout?: 'full' | 'normal' | 'grid'; // New: Control image layout
 }

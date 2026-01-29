@@ -1,19 +1,24 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { LARGE_PROJECTS, SOCIAL_LINKS } from '../constants';
+import { LARGE_PROJECTS, SMALL_PROJECTS, SOCIAL_LINKS } from '../constants';
 import { Navigation } from './Navigation';
 import { ChatAssistant } from './ChatAssistant';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { resolvePath } from '../utils/imageHelpers';
 
 export const ProjectPage: React.FC = () => {
   const { id } = useParams();
-  const projectIndex = LARGE_PROJECTS.findIndex(p => p.id === id);
-  const project = LARGE_PROJECTS[projectIndex];
+  
+  // Combine all projects for lookup
+  const ALL_PROJECTS = [...LARGE_PROJECTS, ...SMALL_PROJECTS];
+  
+  const projectIndex = ALL_PROJECTS.findIndex(p => p.id === id);
+  const project = ALL_PROJECTS[projectIndex];
   
   // Calculate Next Project
-  const nextProjectIndex = (projectIndex + 1) % LARGE_PROJECTS.length;
-  const nextProject = LARGE_PROJECTS[nextProjectIndex];
+  const nextProjectIndex = (projectIndex + 1) % ALL_PROJECTS.length;
+  const nextProject = ALL_PROJECTS[nextProjectIndex];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,7 +71,7 @@ export const ProjectPage: React.FC = () => {
 
           <div className="w-full aspect-video bg-stone-200 rounded-3xl overflow-hidden mb-16 shadow-lg">
             <img 
-              src={project.detailImageUrl || project.imageUrl} 
+              src={resolvePath(project.detailImageUrl || project.imageUrl)} 
               alt={project.title} 
               className="w-full h-full object-cover"
             />
@@ -169,7 +174,7 @@ export const ProjectPage: React.FC = () => {
                       {section.imageUrl && (
                         <div className="overflow-hidden shadow-sm bg-stone-50 mb-6 last:mb-0">
                           <img 
-                            src={section.imageUrl} 
+                            src={resolvePath(section.imageUrl)} 
                             alt={section.title || 'Project detail'} 
                             className="w-full h-auto object-cover"
                           />
@@ -179,9 +184,19 @@ export const ProjectPage: React.FC = () => {
                       {section.image2Url && (
                         <div className="overflow-hidden shadow-sm bg-stone-50 mb-6 last:mb-0">
                           <img 
-                            src={section.image2Url} 
+                            src={resolvePath(section.image2Url)} 
                             alt={section.title || 'Project detail 2'} 
                             className="w-full h-auto object-cover"
+                          />
+                        </div>
+                      )}
+                      
+                      {section.videoUrl && (
+                        <div className="overflow-hidden shadow-sm bg-stone-50 mb-6 last:mb-0">
+                          <video 
+                            src={resolvePath(section.videoUrl)} 
+                            controls
+                            className="w-full h-auto"
                           />
                         </div>
                       )}
@@ -195,7 +210,7 @@ export const ProjectPage: React.FC = () => {
                     {section.imageUrl && (
                       <div className="overflow-hidden shadow-sm bg-stone-50 aspect-video">
                         <img 
-                          src={section.imageUrl} 
+                          src={resolvePath(section.imageUrl)} 
                           alt="Detail 1" 
                           className="w-full h-full object-cover"
                         />
@@ -204,7 +219,7 @@ export const ProjectPage: React.FC = () => {
                     {section.image2Url && (
                       <div className="overflow-hidden shadow-sm bg-stone-50 aspect-video">
                         <img 
-                          src={section.image2Url} 
+                          src={resolvePath(section.image2Url)} 
                           alt="Detail 2" 
                           className="w-full h-full object-cover"
                         />
@@ -219,7 +234,7 @@ export const ProjectPage: React.FC = () => {
                     {section.imageUrl && (
                       <div className="md:col-span-12 mt-4 overflow-hidden shadow-sm bg-stone-50">
                         <img 
-                          src={section.imageUrl} 
+                          src={resolvePath(section.imageUrl)} 
                           alt={section.title || 'Full width detail'} 
                           className="w-full h-auto object-cover"
                         />
@@ -228,9 +243,19 @@ export const ProjectPage: React.FC = () => {
                     {section.image2Url && (
                       <div className="md:col-span-12 mt-4 overflow-hidden shadow-sm bg-stone-50">
                         <img 
-                          src={section.image2Url} 
+                          src={resolvePath(section.image2Url)} 
                           alt={(section.title || 'Full width detail')} 
                           className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    )}
+                    
+                    {section.videoUrl && (
+                      <div className="md:col-span-12 mt-4 overflow-hidden shadow-sm bg-stone-50">
+                        <video 
+                          src={resolvePath(section.videoUrl)} 
+                          controls
+                          className="w-full h-auto"
                         />
                       </div>
                     )}

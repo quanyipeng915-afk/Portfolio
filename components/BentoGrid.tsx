@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Project } from '../types';
+import { resolvePath } from '../utils/imageHelpers';
 
 interface BentoGridProps {
   projects: Project[];
@@ -10,18 +12,22 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ projects }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[250px]">
       {projects.map((project, idx) => (
+        <Link
+            key={project.id}
+            to={`/project/${project.id}`}
+            className={`block relative group overflow-hidden rounded-xl bg-stone-100 ${
+              idx === 0 || idx === 3 ? 'md:col-span-2' : ''
+            }`}
+          >
         <motion.div
-          key={project.id}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: idx * 0.1 }}
-          className={`relative group overflow-hidden rounded-xl bg-stone-100 ${
-            idx === 0 || idx === 3 ? 'md:col-span-2' : ''
-          }`}
+          className="w-full h-full"
         >
           <img
-            src={project.imageUrl}
+            src={resolvePath(project.imageUrl)}
             alt={project.title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
           />
@@ -34,6 +40,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ projects }) => {
             <h4 className="text-xl font-serif leading-none">{project.title}</h4>
           </div>
         </motion.div>
+        </Link>
       ))}
     </div>
   );

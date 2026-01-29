@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { resolvePath } from '../utils/imageHelpers';
 
 interface ProjectCardProps {
   project: Project;
@@ -28,7 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             <motion.img
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1] }}
-              src={project.imageUrl}
+              src={resolvePath(project.imageUrl)}
               alt={project.title}
               className="object-cover w-full h-full"
             />
