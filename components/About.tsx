@@ -36,7 +36,7 @@ export const About: React.FC = () => {
         </motion.p>
 
         <a 
-          href="/resume.pdf" 
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
           download="Elian_Peng_Resume.pdf"
           className="flex items-center gap-2 text-stone-900 border border-stone-200 px-6 py-3 rounded-xl hover:bg-stone-50 transition-colors w-fit"
         >
