@@ -1,6 +1,4 @@
-import { Replace } from "lucide-react";
 import { Experience, Project } from "./types";
-import { text } from "stream/consumers";
 
 export const NAV_LINKS = [
   { label: 'Work', href: '#work' },
@@ -584,29 +582,23 @@ export const SMALL_PROJECTS: Project[] = [
 ];
 
 export const EXPERIENCES: Experience[] = [
+
   {
-    id: 'e1',
-    role: 'User Experience Design Assistant',
-    company: 'Shanghai LUMO Culture Communication Co., Ltd.',
-    period: 'Jun 2024 - Nov 2024',
-    description: 'Conducted market research and user behavior analysis for Weseed Coffee’s online shop, identifying consumer trends and optimizing the purchasing journey. Provided actionable insights to improve user satisfaction and drive higher conversion rates. Designed visual interfaces, ensuring brand consistency and an intuitive shopping experience.'
-  },
-  {
-    id: 'e2',
+    id: 'e3',
     role: 'UI/UX Design Intern',
     company: 'Yonyou Network Technology Co., Ltd.',
     period: 'Jan 2023 - Mar 2023',
     description: 'Organized and maintained the UI component library, ensuring consistency and usability across multiple systems. Collected user feedback and designed interactive layouts for internal social features, improving user experience. Developed visual design for the company website, focusing on cohesive layouts and key functional elements.'
   },
   {
-    id: 'e3',
+    id: 'e1',
     role: 'Visual Design Intern',
     company: 'TRANSSNET',
     period: 'Mar 2023 - Aug 2023',
     description: 'Designed and implemented key visuals for digital marketing campaigns, customizing graphics to enhance user engagement. Edited and optimized video ads by analyzing user behavior and performance data, increasing click-through rates. Created dynamic animations for live-stream gifts, contributing to platform monetization.'
   },
     {
-    id: 'e4',
+    id: 'e2',
     role: 'Branding Designer',
     company: 'Mokexi (Shenzhen) Technology Co., LTD. (American Contact lens brand)',
     period: 'Feb 2025 - May 2025',
